@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.15686275, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -243,7 +243,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0954234afb2ab8343bfb92aa9a9ffd12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -306,7 +306,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4485541775136726, guid: bcf78ed9899ed2b4b98da643d8d4dc46, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.9
+      value: 3.12
       objectReference: {fileID: 0}
     - target: {fileID: 4485541775136726, guid: bcf78ed9899ed2b4b98da643d8d4dc46, type: 2}
       propertyPath: m_LocalPosition.y
@@ -568,6 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 579607730}
   - component: {fileID: 579607729}
+  - component: {fileID: 579607731}
   m_Layer: 0
   m_Name: PlungerTrigger
   m_TagString: Untagged
@@ -593,13 +594,26 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 579607728}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.11, y: 0, z: -5.3}
-  m_LocalScale: {x: 0.6, y: 0.5, z: 0.5}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.75}
+  m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1428609963}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &579607731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579607728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a3e5a329d6d33b42aaf7f277f709a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPower: 80
+  powerSlider: {fileID: 1554105885}
 --- !u!1 &583062355
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +646,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0954234afb2ab8343bfb92aa9a9ffd12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -757,7 +771,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 589045711}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 29cda73f5e3eb1948a93fda9e182db11, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1005,7 +1019,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 911704305}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 29cda73f5e3eb1948a93fda9e182db11, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1089,7 +1103,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 969205184}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 29cda73f5e3eb1948a93fda9e182db11, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1466,7 +1480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1366549801
 GameObject:
@@ -1849,7 +1863,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.11, y: 0, z: -6.05}
   m_LocalScale: {x: 0.6, y: 0.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 579607730}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2223,7 +2238,7 @@ RectTransform:
   m_Children:
   - {fileID: 1554105884}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2385,7 +2400,7 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2006672879}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 29cda73f5e3eb1948a93fda9e182db11, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
