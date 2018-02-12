@@ -1,27 +1,41 @@
-﻿using System.Collections;
+﻿////////////////////////////////////////////
+// Práctica: Pinball
+// Alumno/a: Alejandro Segura Meléndez
+// Curso: 2017/2018
+// Fichero: FlipperScript.cs
+////////////////////////////////////////////
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Script encargado de controlar el comportamiento de los 'flippers'.
+/// </summary>
 public class FlipperScript : MonoBehaviour
 {
-    //Ángulo de poscion en descanso
+    // Ángulo de posición en descanso.
     public float RestPosition = 0f;
 
-    //Ángulo de poscion presionado
+    // Ángulo de posición presionado.
     public float PressedPosition = 45f;
 
-    //fuerza del golpe del impacto
+    // Fuerza del golpe del impacto.
     public float HitStrength = 10000f;
 
-    // velocidad del flipper
+    // Velocidad del flipper.
     public float FlipperDamper = 150f;
 
-    // nombre de la entrada
+    // Nombre de la entrada
     public string InputName;
 
-
+    // Referencia a la fuente de audio.
     private AudioSource _audioSource;
+
+    // Referencia al elemento de muelle.
     private HingeJoint _hingejoint;
+
+    // Bandera para reproducir o no el sonido del 'flipper'.
     private bool play = true;
 
     // Use this for initialization

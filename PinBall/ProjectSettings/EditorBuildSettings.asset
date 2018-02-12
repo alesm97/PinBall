@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Awake.unity
+    guid: b60484d0287e17d4dbcf2dbeaca20bd8
+  - enabled: 1
+    path: Assets/Scenes/Pinball.unity
+    guid: f7b7c0d364e249540b956b321b53d4b5
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 2b845118d5fe8184b9aeeba0c1ae694c

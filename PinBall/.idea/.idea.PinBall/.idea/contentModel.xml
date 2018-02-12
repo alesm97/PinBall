@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\alesm97\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_PinBall.1015374315.00" t="ExcludeRecursive" />
-    <e p="C:\Users\alesm97\Desktop\UnityProjects\PinBallv3\PinBall" t="IncludeRecursive">
+    <e p="C:\Users\alesm97\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_PinBall.-159069322.00" t="ExcludeRecursive" />
+    <e p="C:\Users\alesm97\Desktop\UnityProjects\PinBall" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -139,7 +139,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="FlipperBouncerScript.cs" t="Include" />
+          <e p="AwakeScript.cs" t="Include" />
+          <e p="BlockerTopScript.cs" t="Include" />
+          <e p="CenterBoosterScript.cs" t="Include" />
+          <e p="ChangeColor.cs" t="Include" />
+          <e p="FinalInterfaceScript.cs" t="Include" />
           <e p="FlipperScript.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="InterfaceScript.cs" t="Include" />
