@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,16 +8,21 @@ public class PlungerScript : MonoBehaviour {
 
     public float maxPower = 100f;
     public Slider powerSlider;
+    public AudioClip audioPressed;
+    public AudioClip audioUp;
 
     private float power;
     private List<Rigidbody> ballList;
     private bool ballReady;
+    private bool play = true;
+    private AudioSource _audioSource;
 
-	// Use this for initialization
+    // Use this for initialization
 	void Start () {
         powerSlider.minValue = 0f;
         powerSlider.maxValue = maxPower;
         ballList = new List<Rigidbody>();
+	    _audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -44,10 +50,20 @@ public class PlungerScript : MonoBehaviour {
                 {
                     power += 50 * Time.deltaTime;
                 }
+
+                if (play)
+                {
+                    _audioSource.clip = audioPressed;
+                    _audioSource.Play();
+                    play = false;
+                }
             }
 
             if (Input.GetKeyUp(KeyCode.Space))
             {
+                play = true;
+                _audioSource.clip = audioUp;
+                _audioSource.Play();
                 foreach (Rigidbody r in ballList)
                 {
                     r.AddForce(power * Vector3.forward);
